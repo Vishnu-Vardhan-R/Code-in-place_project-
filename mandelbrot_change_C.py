@@ -15,9 +15,6 @@ def complex_plot(a):
     for x in range(len(a)-1):
         plt.plot([a[x].real, a[x+1].real], [a[x].imag, a[x+1].imag], '.-', label='python',  color='red', linewidth=.5)
 
-    #limit = np.max(np.ceil(np.absolute(a))) # set limits for axis
-    #plt.xlim((-limit, limit))
-    #plt.ylim((-limit, limit))
     plt.xlim((-2, 2))
     plt.ylim((-1, 1))
     plt.ylabel('Imaginary')
@@ -32,7 +29,6 @@ def complex_plot(a):
 
 
 def mouse_moved(event):
-    #print(f"x = {event.xdata}, y = {event.ydata}")
     c = complex(event.xdata, event.ydata)
     y = (complex(0) ** 2) + c
     lists = [complex(0)]
